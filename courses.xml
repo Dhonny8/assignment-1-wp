@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="courses.xsd">
+    <course id="c1">
+        <title>Full-Stack Web Development</title>
+        <instructor>Jane Doe</instructor>
+        <price currency="INR">4999</price>
+        <rating>4.9</rating>
+        <duration>12 Weeks</duration>
+    </course>
+    <course id="c2">
+        <title>Data Science Bootcamp</title>
+        <instructor>John Smith</instructor>
+        <price currency="INR">5999</price>
+        <rating>4.7</rating>
+        <duration>10 Weeks</duration>
+    </course>
+    <course id="c3">
+        <title>UI/UX Masterclass</title>
+        <instructor>Emily Chen</instructor>
+        <price currency="INR">3999</price>
+        <rating>4.8</rating>
+        <duration>8 Weeks</duration>
+    </course>
+</courses>
