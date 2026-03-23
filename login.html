@@ -23,29 +23,26 @@
         <div class="grid-container auth-grid">
             <div class="form-wrapper">
                 <h2>Register an Account</h2>
-                <form id="registrationForm" class="auth-form" onsubmit="return validateRegistration(event)">
+                <!-- Using HTML5 validation instead of JS -->
+                <form id="registrationForm" class="auth-form" action="index.html">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name">
-                        <span class="error-message" id="nameError"></span>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email">
-                        <span class="error-message" id="emailError"></span>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address">
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Create a password">
-                        <span class="error-message" id="passwordError"></span>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required minlength="6" title="Password must be at least 6 characters">
                     </div>
 
                     <div class="form-group">
                         <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
-                        <span class="error-message" id="confirmPasswordError"></span>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required minlength="6" title="Password must be at least 6 characters">
                     </div>
 
                     <button type="submit" class="btn btn-full">Register</button>
@@ -54,17 +51,15 @@
             
             <div class="form-wrapper">
                 <h2>Login</h2>
-                <form id="loginForm" class="auth-form" onsubmit="return validateLogin(event)">
+                <form id="loginForm" class="auth-form" action="index.html">
                     <div class="form-group">
                         <label for="loginEmail">Email Address</label>
-                        <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email">
-                        <span class="error-message" id="loginEmailError"></span>
+                        <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Please enter a valid email address">
                     </div>
 
                     <div class="form-group">
                         <label for="loginPassword">Password</label>
-                        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password">
-                        <span class="error-message" id="loginPasswordError"></span>
+                        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
                     </div>
                     
                     <button type="submit" class="btn btn-full">Login</button>
@@ -76,7 +71,5 @@
     <footer>
         <p>&copy; 2024 LearnHub. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
